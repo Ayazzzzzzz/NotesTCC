@@ -10,6 +10,19 @@ async function getNotes(req, res) {
   }
 }
 
+export const getNoteById = async(req, res) =>{
+  try {
+      const response = await Notes.findOne({
+          where:{
+              id: req.params.id
+          }
+      });
+      res.status(200).json(response);
+  } catch (error) {
+      console.log(error.message);
+  }
+}
+
 // CREATE
 async function createNotes(req, res) {
   try {
