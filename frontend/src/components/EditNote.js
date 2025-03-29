@@ -16,7 +16,7 @@ const EditNote = () => {
   const updateNote = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/edit-Notes/${id}`, {
+      await axios.post(`${API_BASE_URL}/edit-Notes/${id}`, {
         judul,
         author,
         isi,
@@ -29,7 +29,7 @@ const EditNote = () => {
 
   const getNoteById = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/notes/${id}`);
+      const response = await axios.get(`${API_BASE_URL}/Notes/${id}`);
       setJudul(response.data.judul);
       setAuthor(response.data.author);
       setIsi(response.data.isi);

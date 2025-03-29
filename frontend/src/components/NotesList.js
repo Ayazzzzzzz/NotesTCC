@@ -11,7 +11,7 @@ const NoteList = () => {
 
   const getNotes = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/Notes");
+      const response = await axios.get(`${API_BASE_URL}/Notes`);
       setNotes(response.data);
     } catch (error) {
       console.log(error);
@@ -20,7 +20,7 @@ const NoteList = () => {
 
   const deleteNote = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/delete-Notes/${id}`);
+      await axios.delete(`${API_BASE_URL}/delete-Notes/${id}`);
       getNotes();
     } catch (error) {
       console.log(error);
