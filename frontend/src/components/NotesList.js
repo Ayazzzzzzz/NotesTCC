@@ -12,7 +12,7 @@ const NoteList = () => {
 
   const getNotes = async () => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/Notes`);
+      const response = await fetch(`${API_BASE_URL}/Notes`);
       setNotes(response.data);
     } catch (error) {
       console.log(error);
