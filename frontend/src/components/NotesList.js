@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { API_BASE_URL } from "../../utils";
 
 const NoteList = () => {
   const [notes, setNotes] = useState([]);
