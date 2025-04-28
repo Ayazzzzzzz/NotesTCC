@@ -32,7 +32,7 @@ const NoteList = () => {
     <div className="columns mt-5 is-centered">
       <div className="column is-half">
         <div className="is-flex is-justify-content-space-between is-align-items-center mb-4">
-          <h1 className="title">Your Notes</h1>
+          <h1 className="title">Notes kamu hehe</h1>
           <Link to="/add" className="button is-success">
             + Add Note
           </Link>
