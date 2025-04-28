@@ -17,7 +17,7 @@ const EditNote = () => {
   const updateNote = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${API_BASE_URL}/edit-Notes/${id}`, {
+      await axios.put(`${API_BASE_URL}/edit-Notes/${id}`, {
         judul,
         author,
         isi,
